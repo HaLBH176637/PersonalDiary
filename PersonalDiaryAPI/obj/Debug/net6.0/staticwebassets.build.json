@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cEZCoZIL9qE73HXRJgk2BXVIsPimEvbhxCdt98UHJKQ=",
+  "Source": "PersonalDiaryAPI",
+  "BasePath": "_content/PersonalDiaryAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
