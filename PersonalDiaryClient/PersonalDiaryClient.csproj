@@ -14,4 +14,9 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.30" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.30" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Content Update="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
 </Project>
