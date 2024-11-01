@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {}
+    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {
+    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+        "projectUniqueName": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
         "projectName": "PersonalDiaryClient",
-        "projectPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+        "projectPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
         "packagesPath": "C:\\Users\\hayha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\obj\\",
+        "outputPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hayha\\AppData\\Roaming\\NuGet\\NuGet.Config",

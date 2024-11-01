@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj": {}
+    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj": {
+    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
+        "projectUniqueName": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
         "projectName": "PersonalDiaryAPI",
-        "projectPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
+        "projectPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
         "packagesPath": "C:\\Users\\hayha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\obj\\",
+        "outputPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project PRN231\\PersonalDiary\\PersonalDiaryAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hayha\\AppData\\Roaming\\NuGet\\NuGet.Config",
