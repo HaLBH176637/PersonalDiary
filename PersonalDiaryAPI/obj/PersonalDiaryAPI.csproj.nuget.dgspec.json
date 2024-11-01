@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Sem 8\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj": {}
+    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj": {}
   },
   "projects": {
-    "D:\\Sem 8\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj": {
+    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Sem 8\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
+        "projectUniqueName": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
         "projectName": "PersonalDiaryAPI",
-        "projectPath": "D:\\Sem 8\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
-        "packagesPath": "C:\\Users\\leha1\\.nuget\\packages\\",
-        "outputPath": "D:\\Sem 8\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\obj\\",
+        "projectPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
+        "packagesPath": "C:\\Users\\hayha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leha1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hayha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
         }
       }
     }

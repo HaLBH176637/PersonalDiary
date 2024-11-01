@@ -39,10 +39,10 @@ namespace PersonalDiaryAPI.Controllers
         }
         [AllowAnonymous]
         [HttpPost("Authenticate")]
-        public IActionResult Login([FromBody] LoginDTO loginDTO)
+        public IActionResult Login(string username, string password)
         {
             IActionResult response = Unauthorized();
-            var user = AuthenticateUser(loginDTO.Username, loginDTO.Password);
+            var user = AuthenticateUser(username, password);
             if (user != null)
             {
                 var token = GenerateToken(user);
