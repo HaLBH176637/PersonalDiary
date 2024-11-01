@@ -109,6 +109,5 @@ namespace PersonalDiaryAPI.Controllers
 
             return Ok("Cập nhật thành công người dùng với ID: " + userDTO.Id);
         }
-
     }
 }

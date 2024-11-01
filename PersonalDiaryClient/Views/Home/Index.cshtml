@@ -1,8 +1,77 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/Optionshere.css" />
+    <link rel="stylesheet" href="~/css/card.css" />
+
+    <title>MyDiary - Option</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/3235/3235042.svg" type="image/x-icon" />
+</head>
+<body>
+    <div class="container-fluid">
+        <button class="btn btn-danger" onclick="signOut()">Logout</button>
+    </div>
+
+    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="text-center" style="color: #2b8fc7;">Select Date</h1>
+                </div>
+                <div class="modal-body" id="ModalBody">
+                    <div class="form-group">
+                        <label>Select date to view</label>
+                        <input type="date" id="scheduleDate" name="bday" min="1000-01-01" max="3000-12-31" class="form-control" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="Dbutton" type="button" class="btn btn-primary mx-auto d-block" onclick="setDate()" data-bs-dismiss="modal">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i> Set
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row h-100 justify-content-md-center">
+            <div class="col my-auto">
+                <div class="form-container">
+                    <h3 class="text-center" style="color: #2b8fc7;"><strong>Welcome</strong></h3>
+                    <br />
+                    <div class="card-deck">
+                        <div class="card writecard" onclick="WriteDown()">
+                            <img class="card-img-top" src="~/img/write.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h5 class="card-title">Write About Today</h5>
+                                <p class="card-text">Write your Thoughts. Keep them Secret.</p>
+                            </div>
+                        </div>
+                        <div class="card read-card" onclick="ShowModal()">
+                            <img class="card-img-top" src="~/img/read.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h5 class="card-title">Read Previous Writing</h5>
+                                <p class="card-text">Read your Memories. Get Motivation from Past.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="~/js/credentials.js"></script>
+    <script src="~/js/SelectOption.js"></script>
+</body>
+</html>

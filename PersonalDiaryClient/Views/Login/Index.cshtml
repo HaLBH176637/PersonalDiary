@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+}
+
+
+@* @model PersonalDiaryClient.Models.User
+
+<h1>Login</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login" asp-controller="Login">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" placeholder="Password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+} *@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/design.css">
+    <title>MyDiary - Login</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/3235/3235042.svg" type="image/x-icon">
+</head>
+
+<body>
+
+    <noscript>
+        <div class="error message">
+            We're sorry but our site <strong>requires</strong> JavaScript.
+            <p>Please check your settings if js is disabled</p>
+        </div>
+    </noscript>
+
+    <div class="container">
+        <div class="row h-100 justify-content-md-center">
+            <div class="col col-12 col-sm-6  col-lg-4 my-auto">
+                <div class="form-container">
+
+                    <div class="MyDiary">
+                        <div class="logo">
+                            <img src="/img/MyDiaryIcon.svg" class="mx-auto d-block">
+                        </div><br>
+                        <div class="text-center txt">
+                            <h2><strong>My Diary</strong></h2>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <p> <i class="fa fa-user-circle-o" aria-hidden="true"></i> Username</p>
+                        <input name="Email" class="form-control" id="email" placeholder="Enter Email">
+                    </div>
+
+                    <div class="form-group">
+                        <p><i class="fa fa-unlock" aria-hidden="true"></i> Password</p>
+                        <input name="Psw" type="password" class="form-control " id="password" placeholder="Password">
+                    </div>
+
+                    <div class="subbtn">
+                        <button type="submit" name="Submit" class="btn btn-group-justified mx-auto d-block" onclick="signIn()"><i class="fa fa-check-circle" aria-hidden="true"></i> Login</button>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <a class="mx-auto d-block" href="/Signup/Index">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+
+    <script src="js/credentials.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

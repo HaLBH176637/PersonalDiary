@@ -1,0 +1,10 @@
+﻿.card:hover {
+    /* border: 2px solid #2b8fc7; */
+    cursor: pointer;
+    font: 10px;
+}
+
+    .card:hover h5,
+    .card:hover p {
+        color: #2b8fc7;
+    }

@@ -2684,19 +2684,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hayha\\.nuget\\packages\\": {}
+    "C:\\Users\\leha1\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+      "projectUniqueName": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
       "projectName": "PersonalDiaryClient",
-      "projectPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
-      "packagesPath": "C:\\Users\\hayha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\obj\\",
+      "projectPath": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+      "packagesPath": "C:\\Users\\leha1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hayha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leha1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2775,7 +2775,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }
