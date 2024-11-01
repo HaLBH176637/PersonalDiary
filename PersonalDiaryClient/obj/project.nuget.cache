@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "llfUwnDnLj80qXAgxv9/uU60E3UWoFfvhhj2fpu6weXHbF8TeF09Ox16wVyDbbciwioNS3rOK1JNUmHlu1daVg==",
+  "dgSpecHash": "bE0tbCiE5B42HzM0cv8lqUL2m8HucGj046CVYx2wdAEDMKt4C5o03JDKTfRDPu6Zb4t1qzLcfwzaLzzY4HU0lA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\New folder\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+  "projectFilePath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hayha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hayha\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",

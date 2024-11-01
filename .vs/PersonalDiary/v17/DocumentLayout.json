@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\PersonalDiary\\",
+  "WorkspaceRootPath": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\Project_PRN231\\PersonalDiary\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\hayha\\onedrive\\m\u00E1y t\u00EDnh\\new folder\\personaldiary\\personaldiaryapi\\controllers\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\hayha\\onedrive\\m\u00E1y t\u00EDnh\\project_prn231\\personaldiary\\personaldiaryapi\\controllers\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|solutionrelative:personaldiaryapi\\controllers\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\hayha\\onedrive\\m\u00E1y t\u00EDnh\\new folder\\personaldiary\\personaldiaryapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\hayha\\onedrive\\m\u00E1y t\u00EDnh\\project_prn231\\personaldiary\\personaldiaryapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|solutionrelative:personaldiaryapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\hayha\\onedrive\\m\u00E1y t\u00EDnh\\new folder\\personaldiary\\personaldiaryapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\hayha\\onedrive\\m\u00E1y t\u00EDnh\\project_prn231\\personaldiary\\personaldiaryapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|solutionrelative:personaldiaryapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,9 +28,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\UserDTO.cs",
               "RelativeDocumentMoniker": "PersonalDiaryAPI\\Controllers\\UserDTO.cs",
-              "ToolTip": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\UserDTO.cs",
               "RelativeToolTip": "PersonalDiaryAPI\\Controllers\\UserDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -41,9 +41,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\UserController.cs",
+              "DocumentMoniker": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "PersonalDiaryAPI\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\UserController.cs",
               "RelativeToolTip": "PersonalDiaryAPI\\Controllers\\UserController.cs",
               "ViewState": "AQIAADgAAAAAAAAAAAAgwFoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -53,9 +53,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "PersonalDiaryAPI\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\New folder\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\hayha\\OneDrive\\M\u00E1y t\u00EDnh\\Project_PRN231\\PersonalDiary\\PersonalDiaryAPI\\Controllers\\LoginController.cs",
               "RelativeToolTip": "PersonalDiaryAPI\\Controllers\\LoginController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
