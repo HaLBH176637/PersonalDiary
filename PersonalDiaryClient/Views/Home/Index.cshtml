@@ -1,4 +1,7 @@
-﻿
+﻿@{
+    Layout = null;
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +18,11 @@
     <link rel="icon" href="https://image.flaticon.com/icons/svg/3235/3235042.svg" type="image/x-icon" />
 </head>
 <body>
-    <div class="container-fluid">
-        <button class="btn btn-danger" onclick="signOut()">Logout</button>
-    </div>
+    <form asp-action="Logout" asp-controller="Home">
+        <div class="container-fluid">
+            <button class="btn btn-danger" value="Logout" style="background: #f2ff04;">Logout</button>
+        </div>
+    </form>
 
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog">

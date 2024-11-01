@@ -21,6 +21,7 @@ namespace PersonalDiaryClient.Controllers
             {
                 return Redirect("/Home/Index");
             }
+            TempData["mess"] = "Vui lòng kiểm tra mật khẩu rồi đăng nhập lại đi!!!";
             return Redirect("/Login/Index");
         }
 

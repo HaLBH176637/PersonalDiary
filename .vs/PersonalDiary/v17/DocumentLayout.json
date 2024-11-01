@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryclient\\views\\signup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|solutionrelative:personaldiaryclient\\views\\signup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryclient\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|solutionrelative:personaldiaryclient\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryclient\\views\\signup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|solutionrelative:personaldiaryclient\\views\\signup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryclient\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|solutionrelative:personaldiaryclient\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryclient\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|solutionrelative:personaldiaryclient\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryclient\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCC44178-642A-4158-8D25-1E15522F7193}|PersonalDiaryClient\\PersonalDiaryClient.csproj|solutionrelative:personaldiaryclient\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 146,
+          "SelectedChildIndex": 145,
           "Children": [
             {
               "$type": "Bookmark",
@@ -602,28 +614,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Views\\Signup\\Index.cshtml",
               "RelativeDocumentMoniker": "PersonalDiaryClient\\Views\\Signup\\Index.cshtml",
               "ToolTip": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Views\\Signup\\Index.cshtml",
               "RelativeToolTip": "PersonalDiaryClient\\Views\\Signup\\Index.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAEIAAAC7AAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADoAAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T16:49:59.368Z",
+              "WhenOpened": "2024-11-01T17:45:13.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PersonalDiaryClient\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PersonalDiaryClient\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:37:15.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PersonalDiaryClient\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PersonalDiaryClient\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAABYAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-01T17:33:43.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Views\\Login\\Index.cshtml",
               "RelativeDocumentMoniker": "PersonalDiaryClient\\Views\\Login\\Index.cshtml",
               "ToolTip": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Views\\Login\\Index.cshtml",
               "RelativeToolTip": "PersonalDiaryClient\\Views\\Login\\Index.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADMAAAAlAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-01T14:43:11.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "PersonalDiaryClient\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "PersonalDiaryClient\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T17:24:37.292Z",
               "EditorCaption": ""
             }
           ]

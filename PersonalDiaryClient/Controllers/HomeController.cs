@@ -18,9 +18,9 @@ namespace PersonalDiaryClient.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Logout()
         {
-            return View();
+            return Redirect("/Login/Index");
         }
 
 
