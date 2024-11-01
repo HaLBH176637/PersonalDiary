@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonalDiaryAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4582881590c97673f0e4f744d1431341526a6d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5afa9404d8415b0d683aae051636856e518caa4a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonalDiaryAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonalDiaryAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
