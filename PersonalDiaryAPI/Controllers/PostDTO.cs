@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using PersonalDiaryAPI.Models;
 
-namespace PersonalDiaryClient.Models
+namespace PersonalDiaryAPI.Controllers
 {
-    public partial class Post
+    public class PostDTO
     {
-        public Post()
+        public PostDTO()
         {
             Likes = new HashSet<Like>();
             Reports = new HashSet<Report>();
@@ -23,5 +22,12 @@ namespace PersonalDiaryClient.Models
         public virtual ICollection<Like> Likes { get; set; }
         public virtual ICollection<Report> Reports { get; set; }
         public virtual ICollection<Share> Shares { get; set; }
+    }
+    public partial class LikeDTO
+    {
+
+        public int UserId { get; set; }
+        public DateTime? CreatedAt { get; set; }
+
     }
 }

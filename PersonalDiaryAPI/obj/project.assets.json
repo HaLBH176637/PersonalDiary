@@ -3611,11 +3611,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
+      "projectUniqueName": "D:\\Sem 8\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
       "projectName": "PersonalDiaryAPI",
-      "projectPath": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
+      "projectPath": "D:\\Sem 8\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\PersonalDiaryAPI.csproj",
       "packagesPath": "C:\\Users\\leha1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\obj\\",
+      "outputPath": "D:\\Sem 8\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\leha1\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,0 +1,60 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/WriteHere.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <title>MyDiary - Write</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/3235/3235042.svg" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <button class=" btn-danger " onclick="signOut()" align="right">Logout</button>
+    </div>
+    <div class="container">
+        <div class="row h-100 justify-content-md-center">
+            <div class="col my-auto">
+                <div class="form-container">
+                    <div class="row">
+                        <div class="col my-auto">
+                            <h1 class="text-center" style="color: #2b8fc7;">Hey There!</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col my-auto" style="text-align: right;">
+                            <h5 class="DateAndDay" id="DateAndDay" style=" color: #2b8fc7; "></h5>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <textarea class="form-control " id="TextValue" placeholder=" You are free to write here. Just click here and start typing.... " rows="15 "></textarea>
+                    </div>
+                    <div class="subbtn ">
+                        <button type="submit" class="btn btn-group-justified mx-auto d-block" onclick="LoadText()"><i class="fa fa-check-circle" aria-hidden="true"></i> Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="js/credentials.js"></script>
+    <script src="js/WriteIt.js"></script>
+
+</body>
+
+</html>

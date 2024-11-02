@@ -13,7 +13,43 @@ namespace PersonalDiaryAPI.Controllers
         [HttpGet("GetAllPost")]
         public IActionResult GetPost()
         {
-            var post = _context.Posts.ToList();
+            var post = _context.Posts
+                .Include(p => p.Likes)
+                .Include(p => p.Reports)
+                .Include(p => p.Shares)
+                .Include(p => p.User)
+                .Select(x => new PostDTO
+                {
+                     Content = x.Content,
+                     CreatedAt = x.CreatedAt,
+                     Id = x.Id,
+                     Privacy = x.Privacy,
+                     UserId = x.UserId,
+                     Tag = x.Tag,
+                     Likes = x.Likes.Select(l => new Like
+                     {
+                         Id = l.Id,
+                         CreatedAt = l.CreatedAt,
+                         UserId = l.UserId,
+                         PostId = l.PostId,
+                     }).ToList(),
+                     Shares = x.Shares.Select(s => new Share
+                     {
+                         Id = s.Id,
+                         CreatedAt = s.CreatedAt,
+                         UserId = s.UserId,
+                         PostId = s.PostId
+                     }).ToList(),
+                    Reports = x.Reports.Select(r => new Report
+                    {
+                        Id = r.Id,
+                        CreatedAt = r.CreatedAt,
+                        UserId = r.UserId,
+                        PostId = r.PostId,
+                        Reason = r.Reason
+                    }).ToList(),
+
+                }).ToList();
             return Ok(post);
         }
 
