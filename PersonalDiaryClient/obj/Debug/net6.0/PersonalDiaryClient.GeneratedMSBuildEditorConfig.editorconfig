@@ -18,6 +18,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Sem 8\PRN231\PersonalDiary\PersonalDiaryClient
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Sem 8/PRN231/PersonalDiary/PersonalDiaryClient/Views/Diary/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhcnlcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sem 8/PRN231/PersonalDiary/PersonalDiaryClient/Views/Diary/DetailsPrivate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhcnlcRGV0YWlsc1ByaXZhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sem 8/PRN231/PersonalDiary/PersonalDiaryClient/Views/Diary/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sem 8/PRN231/PersonalDiary/PersonalDiaryClient/Views/Diary/Private.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhcnlcUHJpdmF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Sem 8/PRN231/PersonalDiary/PersonalDiaryClient/Views/Diary/Public.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhcnlcUHVibGljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Sem 8/PRN231/PersonalDiary/PersonalDiaryClient/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

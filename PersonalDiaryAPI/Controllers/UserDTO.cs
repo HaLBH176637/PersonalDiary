@@ -1,4 +1,5 @@
-﻿namespace PersonalDiaryAPI.Controllers
+﻿
+namespace PersonalDiaryAPI.Controllers
 {
     public class UserDTO
     {

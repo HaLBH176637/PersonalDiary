@@ -9,7 +9,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 string conStr = builder.Configuration.GetConnectionString("ConStr");
 // Add services to the container.
-//builder.Services.AddDbContext<PersonalDiaryContext>(opt => opt.UseSqlServer(conStr));
+builder.Services.AddDbContext<PersonalDiaryContext>(opt => opt.UseSqlServer(conStr));
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddControllers();

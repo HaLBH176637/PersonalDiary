@@ -49,9 +49,9 @@
                     <form asp-action="Login" asp-controller="Login">
                         <div asp-validation-summary="All" class="text-danger"></div>
                         <div class="form-group">
-                            <p> <i class="fa fa-user-circle-o" aria-hidden="true"></i> Email</p>
-                            <input asp-for="Email" class="form-control" placeholder="Email" />
-                            <span asp-validation-for="Email" class="text-danger"></span>
+                            <p> <i class="fa fa-user-circle-o" aria-hidden="true"></i> Username</p>
+                            <input asp-for="Username" class="form-control" placeholder="Username" />
+                            <span asp-validation-for="Username" class="text-danger"></span>
                         </div>
                         <div class="form-group">
                             <p><i class="fa fa-unlock" aria-hidden="true"></i> Password</p>
@@ -63,8 +63,8 @@
                         </div>
                     </form>
                     <br>
-                    <div class="row text-center">
-                        <a class="mx-auto d-block" href="/Signup/Index">Sign Up</a>
+                    <div class="row text-center" onclick="Signup()">
+                        <h6 class="mx-auto d-block" style="color: #007bff">Sign Up</h6>
                     </div>
                     <h6 style="text-align:center; color:red">@TempData["mess"]</h6>
                 </div>
@@ -76,7 +76,11 @@
 
     <script src="js/credentials.js"></script>
     <script src="js/index.js"></script>
-
+    <script>
+        function Signup() {
+            window.location.href = '@Url.Action("Index", "Signup")';
+        }
+    </script>
 </body>
 
 </html>

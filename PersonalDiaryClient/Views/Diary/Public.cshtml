@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Public Posts";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - PersonalDiaryClient</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container-fluid d-flex justify-content-between">
+        <form asp-action="Index" asp-controller="Home">
+            <button class="btn-warning" value="Home" style="background: yellow;">Home</button>
+        </form>
+        <form asp-action="SearchByTag" asp-controller="Diary" method="get" class="d-flex">
+            <input type="text" name="tag" class="form-control" placeholder="Search by Tag" required />
+            <button type="submit" class="btn btn-primary ml-2">Search</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center text-white mb-4">Public Posts</h2>
+        <div class="row">
+            @if (ViewBag.Posts != null)
+            {
+                @foreach (var post in ViewBag.Posts)
+                {
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">@post.Tag</h5>
+                                <p class="card-text">
+                                    @(post.Content.Length > 100 ? post.Content.Substring(0, 100) + "..." : post.Content)
+                                </p>
+                                <p class="text-muted">Posted on: @post.CreatedAt?.ToString("yyyy-MM-dd")</p>
+                                <p class="text-secondary"><strong>Privacy:</strong> @post.Privacy</p>
+                            </div>
+                            <div class="card-footer bg-transparent">
+                                <a asp-action="Details" asp-route-id="@post.Id" class="btn btn-outline-primary btn-block">Read Details</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12">
+                    <p class="text-center text-white">No posts available.</p>
+                </div>
+            }
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        function IndexDiary() {
+            window.location.href = '@Url.Action("Index", "Diary")';
+        }
+        function PublicDiary() {
+            window.location.href = '@Url.Action("Public", "Diary")';
+        }
+    </script>
+</body>
+</html>

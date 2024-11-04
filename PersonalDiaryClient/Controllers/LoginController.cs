@@ -1,12 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PersonalDiaryClient.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace PersonalDiaryClient.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly PersonalDiaryContext context = new PersonalDiaryContext();
+        private readonly HttpClient _client;
+
+        public LoginController()
+        {
+            _client = new HttpClient();
+        }
 
         public IActionResult Index()
         {
@@ -16,13 +23,32 @@ namespace PersonalDiaryClient.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(User user)
         {
-            var m = context.Users.FirstOrDefault(s => s.Email.Contains(user.Email) && s.Password.Contains(user.Password));
-            if (m != null)
+            var loginDTO = new
             {
-                return Redirect("/Home/Index");
+                Username = user.Username,
+                Password = user.Password
+            };
+
+            var content = new StringContent(JsonConvert.SerializeObject(loginDTO), Encoding.UTF8, "application/json");
+
+            HttpResponseMessage response = await _client.PostAsync("https://localhost:7108/api/Login/Authenticate", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                dynamic responseData = JsonConvert.DeserializeObject(jsonResponse);
+
+                string token = responseData.token;
+                int userId = responseData.userId;
+
+                HttpContext.Session.SetInt32("UserId", userId);
+                HttpContext.Session.SetString("AuthToken", token);
+
+                return RedirectToAction("Index", "Home");
             }
+
             TempData["mess"] = "Vui lòng kiểm tra mật khẩu rồi đăng nhập lại đi!!!";
-            return Redirect("/Login/Index");
+            return RedirectToAction("Index", "Login");
         }
 
         public IActionResult Success()

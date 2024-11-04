@@ -2,6 +2,11 @@
     Layout = null;
 }
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    var successMessage = TempData["SuccessMessage"] as string;
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +23,21 @@
     <link rel="icon" href="https://image.flaticon.com/icons/svg/3235/3235042.svg" type="image/x-icon" />
 </head>
 <body>
-    <form asp-action="Logout" asp-controller="Home">
-        <div class="container-fluid">
-            <button class="btn btn-danger" value="Logout" style="background: #f2ff04;">Logout</button>
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div id="successAlert" class="alert alert-success fade show" role="alert">
+            @successMessage
         </div>
-    </form>
+    }
+
+    <div class="container-fluid d-flex justify-content-between">
+        <form asp-action="Logout" asp-controller="Home" class="mr-2">
+            <button class="btn-danger" value="Logout" style="background: red;">Logout</button>
+        </form>
+        <form asp-action="Index" asp-controller="Home">
+            <button class="btn-warning" value="Home" style="background: yellow;">Home</button>
+        </form>
+    </div>
 
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
         <div class="modal-dialog">
@@ -52,31 +67,31 @@
                     <h3 class="text-center" style="color: #2b8fc7;"><strong>Welcome</strong></h3>
                     <br />
                     <div class="card-deck">
-                        <div class="card writecard" onclick="WriteDown()">
+                        <div class="card writecard" onclick="IndexDiary()">
                             <img class="card-img-top" src="~/img/write.jpg" alt="Card image cap" />
                             <div class="card-body">
-                                <h5 class="card-title">Write About Today</h5>
+                                <h5 class="card-title">Write About Today (Index)</h5>
                                 <p class="card-text">Write your Thoughts. Keep them Secret.</p>
                             </div>
                         </div>
-                        <div class="card read-card" onclick="ShowModal()">
+                        <div class="card read-card" onclick="PublicDiary()">
                             <img class="card-img-top" src="~/img/read.jpg" alt="Card image cap" />
                             <div class="card-body">
-                                <h5 class="card-title">Read Previous Writing</h5>
+                                <h5 class="card-title">Read Previous Writing (Public)</h5>
+                                <p class="card-text">Read your Memories. Get Motivation from Past.</p>
+                            </div>
+                        </div>
+                        <div class="card read-card" onclick="PrivateDiary()">
+                            <img class="card-img-top" src="~/img/read.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h5 class="card-title">Private Diary (Index)</h5>
                                 <p class="card-text">Read your Memories. Get Motivation from Past.</p>
                             </div>
                         </div>
                         <div class="card read-card" onclick="ShowModal()">
                             <img class="card-img-top" src="~/img/read.jpg" alt="Card image cap" />
                             <div class="card-body">
-                                <h5 class="card-title">Private Diary</h5>
-                                <p class="card-text">Read your Memories. Get Motivation from Past.</p>
-                            </div>
-                        </div>
-                        <div class="card read-card" onclick="ShowModal()">
-                            <img class="card-img-top" src="~/img/read.jpg" alt="Card image cap" />
-                            <div class="card-body">
-                                <h5 class="card-title">Reup</h5>
+                                <h5 class="card-title">(See Memory)</h5>
                                 <p class="card-text">Read your Memories. Get Motivation from Past.</p>
                             </div>
                         </div>
@@ -92,5 +107,26 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
     <script src="~/js/credentials.js"></script>
     <script src="~/js/SelectOption.js"></script>
+    <script>
+        function IndexDiary() {
+            window.location.href = '@Url.Action("Index", "Diary")';
+        }
+        function PublicDiary() {
+            window.location.href = '@Url.Action("Public", "Diary")';
+        }
+        function PrivateDiary() {
+            window.location.href = '@Url.Action("Private", "Diary")';
+        }
+        function IndexDiary() {
+            window.location.href = '@Url.Action("Index", "Diary")';
+        }
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#successAlert').fadeOut('slow');
+            }, 3000); 
+        });
+    </script>
+
+
 </body>
 </html>

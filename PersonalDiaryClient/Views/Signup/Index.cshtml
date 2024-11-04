@@ -1,34 +1,24 @@
-﻿@{
+﻿@model PersonalDiaryClient.Models.UserDTO
+
+@{
     Layout = null;
 }
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+    <title>MyDiary - Signup</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/design.css">
-    <title>MyDiary - Signup</title>
-    <link rel="icon" href="https://image.flaticon.com/icons/svg/3235/3235042.svg" type="image/x-icon">
 </head>
-
 <body>
-
     <div class="container">
         <div class="row h-100 justify-content-md-center">
-            <div class="col col-12 col-sm-6  col-lg-4 my-auto">
+            <div class="col col-12 col-sm-6 col-lg-4 my-auto">
                 <div class="form-container">
-
                     <div class="MyDiary">
                         <div class="logo">
                             <img src="/img/MyDiaryIcon.svg" class="mx-auto d-block">
@@ -38,48 +28,44 @@
                         </div>
                     </div>
                     <br>
-                    <div class="form-group">
-                        <p> <i class="fa fa-user-circle-o" aria-hidden="true"></i> FullName</p>
-                        <input type="text" name="Email" class="form-control" id="email" placeholder="Enter FullName">
-                    </div>
-                    <div class="form-group">
-                        <p> <i class="fa fa-user-circle-o" aria-hidden="true"></i> Email</p>
-                        <input type="email" name="Email" class="form-control" id="email" placeholder="Enter Email">
-                    </div>
-
-                    <div class="form-group">
-                        <p><i class="fa fa-unlock" aria-hidden="true"></i> Password</p>
-                        <input type="password" name="Psw" type="password" class="form-control " id="password" placeholder="Password">
-                    </div>
-                    @* <div class="form-group">
-                        <p><i class="fa fa-unlock" aria-hidden="true"></i> RePassword</p>
-                        <input name="Psw" type="password" class="form-control " id="password" placeholder="Password">
-                    </div> *@
-                    <div class="form-group">
-                        <p><i class="fa fa-user-circle-o" aria-hidden="true"></i> Date of Birth</p>
-                        <input type="date" name="Psw" class="form-control " id="password" placeholder="Date of Birth">
-                    </div>
-                    <div class="form-group">
-                        <p><i class="fa fa-unlock" aria-hidden="true"></i>Number</p>
-                        <input type="text" name="Psw" class="form-control " id="password" placeholder="Number">
-                    </div>
-                    <div class="subbtn">
-                        <button type="submit" name="Submit" class="btn btn-group-justified mx-auto d-block" onclick="signIn()"><i class="fa fa-check-circle" aria-hidden="true"></i> Sign Up</button>
-                    </div>
+                    <form asp-action="Register" method="post">
+                        <div class="form-group">
+                            <label for="fullname">FullName</label>
+                            <input asp-for="Fullname" class="form-control" id="fullname" placeholder="Enter FullName">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input asp-for="Username" class="form-control" id="username" placeholder="Enter Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input asp-for="Email" type="email" class="form-control" id="email" placeholder="Enter Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input asp-for="Password" type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Private Password</label>
+                            <input asp-for="PrivatePassword" type="password" class="form-control" id="privatepassword" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input asp-for="Dob" type="date" class="form-control" id="dob">
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Number</label>
+                            <input asp-for="Number" class="form-control" id="number" placeholder="Number">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </form>
                     <br>
-                    <div class="row text-center">
-                        <a class="mx-auto d-block" href="/Login/Index">Login</a>
+                    <div class="text-center">
+                        <a href="@Url.Action("Index", "Login")" style="color: #007bff">Login</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
-
-    <script src="js/credentials.js"></script>
-    <script src="js/index.js"></script>
-
 </body>
-
 </html>
