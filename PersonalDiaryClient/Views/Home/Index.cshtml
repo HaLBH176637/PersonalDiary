@@ -31,12 +31,16 @@
     }
 
     <div class="container-fluid d-flex justify-content-between">
-        <form asp-action="Logout" asp-controller="Home" class="mr-2">
-            <button class="btn-danger" value="Logout" style="background: red;">Logout</button>
-        </form>
         <form asp-action="Index" asp-controller="Home">
             <button class="btn-warning" value="Home" style="background: yellow;">Home</button>
         </form>
+
+        @if (ViewBag.UserId != null)
+        {
+            <form asp-action="Logout" asp-controller="Home" class="mr-2">
+                <button class="btn-danger" value="Logout" style="background: red;">Logout</button>
+            </form>
+        }
     </div>
 
     <div class="modal" id="myModal" tabindex="-1" role="dialog">
@@ -67,7 +71,7 @@
                     <h3 class="text-center" style="color: #2b8fc7;"><strong>Welcome</strong></h3>
                     <br />
                     <div class="card-deck">
-                        <div class="card writecard" onclick="IndexDiary()">
+                        <div class="card writecard" onclick="checkLoginAndRedirect('@Url.Action("Index", "Diary")')">
                             <img class="card-img-top" src="~/img/write.jpg" alt="Card image cap" />
                             <div class="card-body">
                                 <h5 class="card-title">Write About Today (Index)</h5>
@@ -81,7 +85,7 @@
                                 <p class="card-text">Read your Memories. Get Motivation from Past.</p>
                             </div>
                         </div>
-                        <div class="card read-card" onclick="PrivateDiary()">
+                        <div class="card read-card" onclick="checkLoginAndRedirect('@Url.Action("Private", "Diary")')">
                             <img class="card-img-top" src="~/img/read.jpg" alt="Card image cap" />
                             <div class="card-body">
                                 <h5 class="card-title">Private Diary (Index)</h5>
@@ -108,6 +112,15 @@
     <script src="~/js/credentials.js"></script>
     <script src="~/js/SelectOption.js"></script>
     <script>
+        function checkLoginAndRedirect(url) {
+            var userId = '@ViewBag.UserId';
+            if (userId) {
+                window.location.href = url; g
+            } else {
+                alert("Bạn cần đăng nhập để truy cập tính năng này!");
+                window.location.href = '@Url.Action("Index", "Login")';
+            }
+        }
         function IndexDiary() {
             window.location.href = '@Url.Action("Index", "Diary")';
         }

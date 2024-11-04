@@ -74,6 +74,12 @@
     <script src="js/credentials.js"></script>
     <script src="js/WriteIt.js"></script>
     <script>
+        $(document).ready(function () {
+            var today = new Date();
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var formattedDate = today.toLocaleDateString('en-US', options);
+            $('#DateAndDay').text(formattedDate);
+        });
         function IndexDiary() {
             window.location.href = '@Url.Action("Index", "Diary")';
         }

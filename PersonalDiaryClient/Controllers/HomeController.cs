@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PersonalDiaryClient.Models;
-using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace PersonalDiaryClient.Controllers
 {
@@ -15,14 +14,16 @@ namespace PersonalDiaryClient.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.UserId = HttpContext.Session.GetInt32("UserId");
             return View();
         }
 
+
         public IActionResult Logout()
         {
-            return Redirect("/Login/Index");
+            HttpContext.Session.Remove("UserId");
+            HttpContext.Session.Remove("AuthToken");
+            return RedirectToAction("Index", "Login");
         }
-
-
     }
 }
