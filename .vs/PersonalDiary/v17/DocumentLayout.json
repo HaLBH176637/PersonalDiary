@@ -7,15 +7,15 @@
       "RelativeMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|solutionrelative:personaldiaryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\personaldiaryapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|solutionrelative:personaldiaryapi\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\personaldiaryapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|solutionrelative:personaldiaryapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|c:\\users\\leha1\\desktop\\prn231\\personaldiary\\personaldiaryapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\personaldiaryapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F74000C9-2789-4561-9A85-1A3D92E80781}|PersonalDiaryAPI\\PersonalDiaryAPI.csproj|solutionrelative:personaldiaryapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -618,8 +618,7 @@
               "RelativeToolTip": "PersonalDiaryAPI\\Controllers\\LoginController.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAxwBQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T14:30:41.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T14:30:41.749Z"
             },
             {
               "$type": "Document",
@@ -629,7 +628,7 @@
               "RelativeDocumentMoniker": "PersonalDiaryAPI\\Program.cs",
               "ToolTip": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryAPI\\Program.cs",
               "RelativeToolTip": "PersonalDiaryAPI\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T14:30:20.216Z",
               "EditorCaption": ""
@@ -644,8 +643,7 @@
               "RelativeToolTip": "PersonalDiaryAPI\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-02T14:30:14.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T14:30:14.14Z"
             },
             {
               "$type": "Document",
@@ -657,8 +655,7 @@
               "RelativeToolTip": "PersonalDiaryAPI\\Controllers\\PostController.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T10:31:33.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-02T10:31:33.571Z"
             },
             {
               "$type": "Document",

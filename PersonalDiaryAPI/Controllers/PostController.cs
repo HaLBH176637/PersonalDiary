@@ -129,15 +129,64 @@ namespace PersonalDiaryAPI.Controllers
             {
                 return NotFound("Post not found.");
             }
+            
             postEntity.Content = editPostDTO.Content;
             postEntity.Privacy = editPostDTO.Privacy;
+            postEntity.Tag = editPostDTO.Tag;
             _context.SaveChanges();
 
-            return Ok("Edit successfully");
+            return Ok("Update successfully");
        
         }
         [HttpDelete("Delete/{id}")]
         public IActionResult DeletePost(int id)
+        {
+            // Tìm bài post theo Id
+            var post = _context.Posts.FirstOrDefault(p => p.Id == id);
+
+            if (post == null)
+            {
+                return NotFound("Post not found.");
+            }
+
+            _context.Posts.Remove(post);
+
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                return StatusCode(500, $"An error occurred while deleting the post: {ex.InnerException?.Message}");
+            }
+
+            return Ok("Post deleted successfully.");
+        }
+        [HttpPut("EditPostPrivate/{id}")]
+        public IActionResult EditPostPrivate(int id, [FromBody] EditPostDTO editPostDTO)
+        {
+            if (editPostDTO == null || string.IsNullOrEmpty(editPostDTO.Content) || string.IsNullOrEmpty(editPostDTO.Privacy))
+            {
+                return BadRequest("Content and Privacy fields are required.");
+            }
+
+            // Tìm bài post cần cập nhật
+            var postEntity = _context.Posts.FirstOrDefault(p => p.Id == id);
+            if (postEntity == null)
+            {
+                return NotFound("Post not found.");
+            }
+
+            postEntity.Content = editPostDTO.Content;
+            postEntity.Privacy = editPostDTO.Privacy;
+            postEntity.Tag = editPostDTO.Tag;
+            _context.SaveChanges();
+
+            return Ok("Update successfully");
+
+        }
+        [HttpDelete("DeletePostPrivate/{id}")]
+        public IActionResult DeletePostPrivate(int id)
         {
             // Tìm bài post theo Id
             var post = _context.Posts.FirstOrDefault(p => p.Id == id);

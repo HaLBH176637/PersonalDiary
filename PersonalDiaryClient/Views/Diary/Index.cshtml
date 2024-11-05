@@ -24,12 +24,17 @@
 <body>
 
     <div class="container-fluid d-flex justify-content-between">
-        <form asp-action="Logout" asp-controller="Home" class="mr-2">
-            <button class="btn-danger" value="Logout" style="background: red;">Logout</button>
-        </form>
         <form asp-action="Index" asp-controller="Home">
             <button class="btn-warning" value="Home" style="background: yellow;">Home</button>
         </form>
+        <form asp-action="AI" asp-controller="Home" class="mr-2">
+            <button class="btn-danger" value="AI" style="background: green;">Chatbot</button>
+        </form>
+        <form asp-action="Logout" asp-controller="Home" class="mr-2">
+            <button class="btn-danger" value="Logout" style="background: red;">Logout</button>
+        </form>
+        
+        
     </div>
     <div class="container">
         <div class="row h-100 justify-content-md-center">

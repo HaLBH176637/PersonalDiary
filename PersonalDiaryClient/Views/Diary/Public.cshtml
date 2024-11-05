@@ -1,6 +1,8 @@
 ﻿@{
     Layout = null;
     ViewBag.Title = "Public Posts";
+    
+
 }
 
 <!DOCTYPE html>
@@ -43,6 +45,14 @@
                             </div>
                             <div class="card-footer bg-transparent">
                                 <a asp-action="Details" asp-route-id="@post.Id" class="btn btn-outline-primary btn-block">Read Details</a>
+                                @{
+                                    if (post.UserId == ViewBag.UserId)
+                                    {
+                                        <a asp-action="EditPost" asp-route-id="@post.Id" class="btn btn-outline-primary btn-block">Edit</a>
+                                        <a asp-action="Delete" asp-route-id="@post.Id" class="btn btn-outline-danger btn-block delete-btn" onclick="return confirmDelete()">Delete</a>
+                                    }
+                                }
+
                             </div>
                         </div>
                     </div>
@@ -65,6 +75,11 @@
         }
         function PublicDiary() {
             window.location.href = '@Url.Action("Public", "Diary")';
+        }
+    </script>
+    <script>
+        function confirmDelete() {
+            return confirm("Bạn có chắc chắn muốn xóa không?");
         }
     </script>
 </body>

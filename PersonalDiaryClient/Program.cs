@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PersonalDiaryClient.Models;
 using Microsoft.AspNetCore.Http;
+using DotnetGeminiSDK;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 string conStr = builder.Configuration.GetConnectionString("ConStr");
 // Add services to the container.
+builder.Services.AddHttpClient();
+
 builder.Services.AddDbContext<PersonalDiaryContext>(opt => opt.UseSqlServer(conStr));
 builder.Services.AddSession(options =>
 {

@@ -25,6 +25,17 @@
             <p class="text-muted text-center">
                 Author: @Model.User.Fullname
             </p>
+            @* @if (ViewBag.UserId == Model.UserId)
+            {
+                <p class="text-muted text-center">Author: Me</p>
+            }
+            else
+            {
+                <p class="text-muted text-center">
+                    Author: @Model.User.Fullname
+                </p>
+            } *@
+            
             <div class="post-content mt-4">
                 @Model.Content
             </div>

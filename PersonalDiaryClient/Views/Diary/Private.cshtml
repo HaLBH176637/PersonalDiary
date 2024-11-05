@@ -1,6 +1,5 @@
 ﻿@{
     Layout = null;
-    ViewBag.Title = "Private Posts";
 }
 
 <!DOCTYPE html>
@@ -8,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewBag.Title - PersonalDiaryClient</title>
+    <title>Private Posts</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
@@ -43,6 +42,13 @@
                             </div>
                             <div class="card-footer bg-transparent">
                                 <a asp-action="DetailsPrivate" asp-route-id="@post.Id" class="btn btn-outline-primary btn-block">Read Details</a>
+                                @{
+                                    if (post.UserId == ViewBag.UserId)
+                                    {
+                                        <a asp-action="EditPostPrivate" asp-route-id="@post.Id" class="btn btn-outline-primary btn-block">Edit</a>
+                                        <a asp-action="DeletePrivate" asp-route-id="@post.Id" class="btn btn-outline-danger btn-block delete-btn" onclick="return confirmDelete()">Delete</a>
+                                    }
+                                }
                             </div>
                         </div>
                     </div>
@@ -63,6 +69,11 @@
         function IndexDiary() {
             window.location.href = '@Url.Action("Index", "Diary")';
         }
+        <script>
+            function confirmDelete() {
+                return confirm("Bạn có chắc chắn muốn xóa không?");
+            }
+    </script>
     </script>
 </body>
 </html>
