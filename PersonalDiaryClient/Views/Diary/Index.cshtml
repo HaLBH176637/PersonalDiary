@@ -27,9 +27,6 @@
         <form asp-action="Index" asp-controller="Home">
             <button class="btn-warning" value="Home" style="background: yellow;">Home</button>
         </form>
-        <form asp-action="AI" asp-controller="Home" class="mr-2">
-            <button class="btn-danger" value="AI" style="background: green;">Chatbot</button>
-        </form>
         <form asp-action="Logout" asp-controller="Home" class="mr-2">
             <button class="btn-danger" value="Logout" style="background: red;">Logout</button>
         </form>
@@ -52,11 +49,14 @@
                     </div>
                     <form id="postForm" method="post" action="/Diary/CreatePost">
                         <div class="form-group">
-                            <textarea class="form-control" id="TextValue" name="Content" placeholder="You are free to write here. Just click here and start typing...." rows="15"></textarea>
+                            <textarea class="form-control" id="TextValue" required="true" name="Content" placeholder="You are free to write here. Just click here and start typing...." rows="15">
+                                @Context.Request.Query["aiResponse"]
+                             </textarea>
                         </div>
+
                         <div class="form-group">
                             <label for="tags"><i class="fa fa-tag" aria-hidden="true"></i> Tags</label>
-                            <input type="text" class="form-control" id="tags" name="Tag" placeholder="Enter tags, separated by commas" />
+                            <input type="text" required="true" class="form-control" id="tags" name="Tag" placeholder="Enter tags, separated by commas" />
                         </div>
                         <div class="d-flex justify-content-between subbtn-container">
                             <div class="subbtn">
@@ -69,6 +69,10 @@
                                     <option value="private">Private</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="d-flex justify-content-between subbtn-container">
+                            <!-- Changed button text to "Ask to AI" -->
+                            <button type="submit" class="btn btn-primary" onclick="redirectToAI()">Ask to AI</button>
                         </div>
                     </form>
                 </div>
@@ -97,7 +101,20 @@
         function IndexDiary() {
             window.location.href = '@Url.Action("Index", "Diary")';
         }
+
     </script>
+    <script>
+            function redirectToAI() {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the content of the textarea
+        const content = document.getElementById('TextValue').value;
+
+        // Redirect to the AI page with the content as a query parameter
+        window.location.href = `/Home/SendAI?userInput=${encodeURIComponent(content)}`;
+        }
+    </script>
+    
 </body>
 
 </html>

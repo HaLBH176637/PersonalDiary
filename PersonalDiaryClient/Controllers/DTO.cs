@@ -40,4 +40,14 @@
         public DateTime? CreatedAt { get; set; }
         public string Privacy { get; set; } = null!;
     }
+    public partial class ReportDTO
+    {
+        public int Id { get; set; }
+        public int UserId { get; set; }
+        public int PostId { get; set; }
+        public string? Reason { get; set; }
+        public DateTime? CreatedAt { get; set; }
+
+    }
+
 }

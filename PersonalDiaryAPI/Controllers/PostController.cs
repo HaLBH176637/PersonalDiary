@@ -247,5 +247,49 @@ namespace PersonalDiaryAPI.Controllers
 
             return Ok(posts);
         }
+        //[HttpPost("ReportPost")]
+        //public IActionResult ReportPost([FromForm] ReportDTO reportDto)
+        //{
+        //    if (reportDto == null || reportDto.UserId <= 0 || reportDto.PostId <= 0 || string.IsNullOrEmpty(reportDto.Reason))
+        //    {
+        //        return BadRequest("UserId, PostId, and Reason fields are required.");
+        //    }
+
+        //    var post = _context.Posts.FirstOrDefault(p => p.Id == reportDto.PostId);
+        //    if (post == null)
+        //    {
+        //        return NotFound("Post not found.");
+        //    }
+
+        //    var user = _context.Users.FirstOrDefault(u => u.Id == reportDto.UserId);
+        //    if (user == null)
+        //    {
+        //        return NotFound("User not found.");
+        //    }
+
+        //    var report = new Report
+        //    {
+        //        UserId = reportDto.UserId,
+        //        PostId = reportDto.PostId,
+        //        Reason = reportDto.Reason,
+        //        CreatedAt = DateTime.UtcNow
+        //    };
+
+        //    _context.Reports.Add(report);
+
+        //    try
+        //    {
+        //        _context.SaveChanges();
+        //    }
+        //    catch (DbUpdateException ex)
+        //    {
+        //        return StatusCode(500, $"An error occurred while reporting the post: {ex.InnerException?.Message}");
+        //    }
+
+        //    // Trả về phản hồi thành công
+        //    return Ok("Post reported successfully.");
+        //}
     }
+
 }
+

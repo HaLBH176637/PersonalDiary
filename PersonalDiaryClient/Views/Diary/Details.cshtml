@@ -22,34 +22,48 @@
         <div class="post-details">
             <h1 class="text-center text-primary">@Model.Tag</h1>
             <p class="text-muted text-center">Posted on: @Model.CreatedAt?.ToString("yyyy-MM-dd")</p>
-            <p class="text-muted text-center">
-                Author: @Model.User.Fullname
-            </p>
-            @* @if (ViewBag.UserId == Model.UserId)
+            @if (ViewBag.UserId == Model.UserId)
             {
                 <p class="text-muted text-center">Author: Me</p>
             }
             else
             {
-                <p class="text-muted text-center">
-                    Author: @Model.User.Fullname
-                </p>
-            } *@
-            
-            <div class="post-content mt-4">
-                @Model.Content
+                <p class="text-muted text-center">Author: @Model.User.Fullname</p>
+            }
+            <div class="post-content mt-4" id="postContent">
+                <!-- Nội dung bài viết sẽ được chia thành 3 phần -->
             </div>
             <div class="text-center mt-4">
                 <a href="@Url.Action("Public", "Diary")" class="btn btn-outline-secondary">Back to Public Diary</a>
             </div>
         </div>
     </div>
+
     <script>
-        function IndexDiary() {
-            window.location.href = '@Url.Action("Public", "Diary")';
+        // Hàm chia bài viết thành 3 phần
+        function splitContent(content) {
+            let part1 = content.substring(0, 300);    // 300 chữ đầu
+            let part2 = content.substring(300, 1000);  // 700 chữ tiếp theo
+            let part3 = content.substring(1000, 1300); // 300 chữ cuối
+
+            return [part1, part2, part3];
         }
 
+        // Đảm bảo rằng nội dung không bị lỗi khi truyền vào JavaScript
+        var content = @Html.Raw(Json.Serialize(Model.Content)); // Sử dụng Json.Serialize để bảo vệ nội dung
+
+        const contentParts = splitContent(content);
+
+        const postContentDiv = document.getElementById("postContent");
+
+        // Duyệt qua các phần đã chia và thêm vào HTML
+        contentParts.forEach(part => {
+            const p = document.createElement("p");
+            p.textContent = part;
+            postContentDiv.appendChild(p);
+        });
     </script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -31,31 +31,31 @@
                     <form asp-action="Register" method="post">
                         <div class="form-group">
                             <label for="fullname">FullName</label>
-                            <input asp-for="Fullname" class="form-control" id="fullname" placeholder="Enter FullName">
+                            <input asp-for="Fullname" class="form-control" required="true" id="fullname" placeholder="Enter FullName">
                         </div>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input asp-for="Username" class="form-control" id="username" placeholder="Enter Username">
+                            <input asp-for="Username" class="form-control" required="true" id="username" placeholder="Enter Username">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input asp-for="Email" type="email" class="form-control" id="email" placeholder="Enter Email">
+                            <input asp-for="Email" type="email" class="form-control" required="true" id="email" placeholder="Enter Email">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input asp-for="Password" type="password" class="form-control" id="password" placeholder="Password">
+                            <input asp-for="Password" type="password" class="form-control" required="true" id="password" placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label for="password">Private Password</label>
-                            <input asp-for="PrivatePassword" type="password" class="form-control" id="privatepassword" placeholder="Password">
+                            <input asp-for="PrivatePassword" type="password" class="form-control" required="true" id="privatepassword" placeholder="Password">
                         </div>
                         <div class="form-group">
                             <label for="dob">Date of Birth</label>
-                            <input asp-for="Dob" type="date" class="form-control" id="dob">
+                            <input asp-for="Dob" type="date" required="true" class="form-control" id="dob">
                         </div>
                         <div class="form-group">
                             <label for="number">Number</label>
-                            <input asp-for="Number" class="form-control" id="number" placeholder="Number">
+                            <input asp-for="Number" class="form-control" required="true" id="number" placeholder="Number">
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
                     </form>

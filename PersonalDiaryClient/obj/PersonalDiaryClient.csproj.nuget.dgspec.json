@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {}
+    "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {
+    "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+        "projectUniqueName": "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
         "projectName": "PersonalDiaryClient",
-        "projectPath": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+        "projectPath": "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
         "packagesPath": "C:\\Users\\leha1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leha1\\Desktop\\PRN231\\PersonalDiary\\PersonalDiaryClient\\obj\\",
+        "outputPath": "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\leha1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,6 +92,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "PagedList": {
+              "target": "Package",
+              "version": "[1.17.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

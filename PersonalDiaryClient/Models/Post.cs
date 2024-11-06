@@ -18,7 +18,6 @@ namespace PersonalDiaryClient.Models
         public string Tag { get; set; } = null!;
         public DateTime? CreatedAt { get; set; }
         public string Privacy { get; set; } = null!;
-
         public virtual User User { get; set; } = null!;
         public virtual ICollection<Like> Likes { get; set; }
         public virtual ICollection<Report> Reports { get; set; }

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using PersonalDiaryClient.Models;
 using Microsoft.AspNetCore.Http;
 using DotnetGeminiSDK;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddControllersWithViews();
 string conStr = builder.Configuration.GetConnectionString("ConStr");
 // Add services to the container.
 builder.Services.AddHttpClient();
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddDbContext<PersonalDiaryContext>(opt => opt.UseSqlServer(conStr));
 builder.Services.AddSession(options =>
@@ -38,5 +40,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Login}/{action=Index}/{id?}");
-
+app.MapControllerRoute(
+        name: "toggleLike",
+        pattern: "{controller=Diary}/{action=ToggleLike}/{postId?}");
 app.Run();

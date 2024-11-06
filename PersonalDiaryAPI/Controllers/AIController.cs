@@ -19,7 +19,7 @@ namespace PersonalDiaryAPI.Controllers
         [HttpPost("prompttext")]
         public async Task<ActionResult<GeminiMessageResponse>> PromptText(string text)
         {
-            var response = await _geminiClient.TextPrompt(text);
+            var response = await _geminiClient.TextPrompt("Gợi ý viết nhật ký" + text);
             if (response == null)
             {
                 return BadRequest();

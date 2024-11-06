@@ -21,14 +21,28 @@
             <input type="text" name="tag" class="form-control" placeholder="Search by Tag" required />
             <button type="submit" class="btn btn-primary ml-2">Search</button>
         </form>
+
+        <form asp-action="FilterPosts" asp-controller="Diary" method="get" class="d-flex">
+            <select name="privacy" class="form-control mr-2">
+                <option value="">All Privacy Levels</option>
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+            </select>
+            <select name="sortOrder" class="form-control mr-2">
+                <option value="">Sort by Date</option>
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
     </div>
 
     <div class="container">
         <h2 class="text-center text-white mb-4">Private Posts</h2>
         <div class="row">
-            @if (ViewBag.Posts != null)
+            @if (ViewBag.Posts != null && ViewBag.Posts.Count > 0)
             {
-                @foreach (var post in ViewBag.Posts)
+                foreach (var post in ViewBag.Posts)
                 {
                     <div class="col-md-4 mb-4">
                         <div class="card shadow-sm">
@@ -37,18 +51,12 @@
                                 <p class="card-text">
                                     @(post.Content.Length > 100 ? post.Content.Substring(0, 100) + "..." : post.Content)
                                 </p>
-                                <p class="text-muted">Posted on: @post.CreatedAt?.ToString("yyyy-MM-dd")</p>
-                                <p class="text-secondary"><strong>Privacy:</strong> @post.Privacy</p>
-                            </div>
-                            <div class="card-footer bg-transparent">
-                                <a asp-action="DetailsPrivate" asp-route-id="@post.Id" class="btn btn-outline-primary btn-block">Read Details</a>
-                                @{
-                                    if (post.UserId == ViewBag.UserId)
-                                    {
-                                        <a asp-action="EditPostPrivate" asp-route-id="@post.Id" class="btn btn-outline-primary btn-block">Edit</a>
-                                        <a asp-action="DeletePrivate" asp-route-id="@post.Id" class="btn btn-outline-danger btn-block delete-btn" onclick="return confirmDelete()">Delete</a>
-                                    }
-                                }
+                                <p class="text-muted">Posted on @post.CreatedAt.ToString("dd/MM/yyyy")</p>
+                                <p class="text-muted">Posted on @post.UserId</p>
+                                
+                                <a asp-action="DetailsPrivate" asp-controller="Diary" asp-route-id="@post.Id" class="btn btn-info">View</a>
+                                <a asp-action="EditPostPrivate" asp-controller="Diary" asp-route-id="@post.Id" class="btn btn-warning">Edit</a>
+                                <a asp-action="DeletePrivate" asp-controller="Diary" asp-route-id="@post.Id" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this post?');">Delete</a>
                             </div>
                         </div>
                     </div>
@@ -56,24 +64,18 @@
             }
             else
             {
-                <div class="col-12">
-                    <p class="text-center text-white">No posts available.</p>
-                </div>
+                <p class="text-danger">No posts found.</p>
             }
         </div>
     </div>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     <script>
-        function IndexDiary() {
-            window.location.href = '@Url.Action("Index", "Diary")';
+        function confirmDelete() {
+            return confirm("Bạn có chắc chắn muốn xóa không?");
         }
-        <script>
-            function confirmDelete() {
-                return confirm("Bạn có chắc chắn muốn xóa không?");
-            }
-    </script>
     </script>
 </body>
 </html>
