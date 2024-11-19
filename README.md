@@ -1,2 +1,15 @@
 # PersonalDiary
 PersonalDiary
+![Screenshot 2024-11-19 181716](https://github.com/user-attachments/assets/926aa2a0-8f86-4f10-8130-2ac4fe2866e8)
+![Screenshot 2024-11-19 181735](https://github.com/user-attachments/assets/5b593ad1-2ead-4aa4-95bf-8a376fd53cf3)
+![Screenshot 2024-11-19 181804](https://github.com/user-attachments/assets/9fb684b8-1f0b-4f23-8316-613d9525fcd4)
+![Screenshot 2024-11-19 181818](https://github.com/user-attachments/assets/9107d515-e094-4018-b3f4-762443931511)
+![Screenshot 2024-11-19 181933](https://github.com/user-attachments/assets/811a19b7-2964-4d4b-8e0e-0fe0c3d0e7cc)
+![Screenshot 2024-11-19 181954](https://github.com/user-attachments/assets/4d3e22d2-5937-402c-a910-fa3e82a67fa0)
+![Screenshot 2024-11-19 182059](https://github.com/user-attachments/assets/9e035b4b-2ec2-49fa-8861-33f6100d28c2)
+![Screenshot 2024-11-19 182119](https://github.com/user-attachments/assets/18a5f761-1854-492b-9af1-49bf316f82b7)
+![a](https://github.com/user-attachments/assets/20bd7c25-3011-4fdd-9434-da69f4289a9d)
+![Screenshot 2024-11-19 182250](https://github.com/user-attachments/assets/541c958d-6d3a-4d53-87c0-c7bd57b0917a)
+![Screenshot 2024-11-19 181432](https://github.com/user-attachments/assets/3e8ef1e8-e937-4977-ac0b-8ec31041ca3a)
+![Screenshot 2024-11-19 181508](https://github.com/user-attachments/assets/d501cb00-49b0-407b-9964-713b058e966c)
+![Screenshot 2024-11-19 181702](https://github.com/user-attachments/assets/afbec6b8-e26b-4543-9882-80535d9a659c)
