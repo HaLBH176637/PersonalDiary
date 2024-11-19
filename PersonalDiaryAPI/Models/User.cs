@@ -23,6 +23,7 @@ namespace PersonalDiaryAPI.Models
         public DateTime? CreatedAt { get; set; }
         public bool? IsBlock { get; set; }
         public int? RoleId { get; set; }
+        public string? PrivatePassword { get; set; }
 
         public virtual Role? Role { get; set; }
         public virtual ICollection<Like> Likes { get; set; }

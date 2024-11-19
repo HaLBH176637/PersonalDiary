@@ -1,8 +1,153 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    var successMessage = TempData["SuccessMessage"] as string;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/Optionshere.css" />
+    <link rel="stylesheet" href="~/css/card.css" />
+
+    <title>MyDiary - Option</title>
+    <link rel="icon" href="https://image.flaticon.com/icons/svg/3235/3235042.svg" type="image/x-icon" />
+</head>
+<body>
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div id="successAlert" class="alert alert-success fade show" role="alert">
+            @successMessage
+        </div>
+    }
+
+    <div class="container-fluid d-flex justify-content-between">
+        <form asp-action="Index" asp-controller="Home">
+            <button class="btn-warning" value="Home" style="background: yellow;">Home</button>
+        </form>
+
+        @if (ViewBag.UserId != null)
+        {
+            <form asp-action="Logout" asp-controller="Home" class="mr-2">
+                <button class="btn-danger" value="Logout" style="background: red;">Logout</button>
+            </form>
+        }
+    </div>
+
+    <div class="modal" id="passwordModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="text-center" style="color: #2b8fc7;">Enter Password for Private Diary</h1>
+                </div>
+                <div class="modal-body" id="ModalBody">
+                    <div class="form-group">
+                        <label for="privatePassword">Enter your password:</label>
+                        <input type="password" id="privatePassword" name="privatePassword" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <button id="submitPassword" type="button" class="btn btn-primary mx-auto d-block" onclick="validatePassword()">Submit</button>
+                    </div>
+                    <div id="errorMessage" class="text-danger" style="display: none;">
+                        <strong>Error:</strong> Incorrect password.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row h-100 justify-content-md-center">
+            <div class="col my-auto">
+                <div class="form-container">
+                    <h3 class="text-center" style="color: #2b8fc7;"><strong>Welcome</strong></h3>
+                    <br />
+                    <div class="card-deck">
+                        <div class="card writecard" onclick="IndexDiary()">
+                            <img class="card-img-top" src="~/img/write.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h5 class="card-title">Write About Today</h5>
+                                <p class="card-text">Diary daily</p>
+                            </div>
+                        </div>
+                        <div class="card read-card" onclick="PublicDiary()">
+                            <img class="card-img-top" src="~/img/read.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h5 class="card-title">Diary Post</h5>
+                                <p class="card-text">Public</p>
+                            </div>
+                        </div>
+                        <div class="card read-card" onclick="checkLoginAndRedirect('@Url.Action("Private", "Diary")')">
+                            <img class="card-img-top" src="~/img/read.jpg" alt="Card image cap" />
+                            <div class="card-body">
+                                <h5 class="card-title">Diary Secret</h5>
+                                <p class="card-text">Private</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="~/js/credentials.js"></script>
+    <script src="~/js/SelectOption.js"></script>
+
+    <script>
+        function checkLoginAndRedirect(url) {
+            var userId = '@ViewBag.UserId';
+            if (userId) {
+                $('#passwordModal').modal('show');  // Show the password modal
+            } else {
+                alert("Bạn cần đăng nhập để truy cập tính năng này!");
+                window.location.href = '@Url.Action("Index", "Login")';
+            }
+        }
+
+        function validatePassword() {
+            var enteredPassword = $('#privatePassword').val();
+            // Send AJAX request to validate password
+            $.ajax({
+                url: '@Url.Action("ValidatePassword", "Diary")', // Adjust URL to match your controller action
+                type: 'POST',
+                data: { password: enteredPassword },
+                success: function (response) {
+                    if (response.isValid) {
+                        window.location.href = '@Url.Action("Private", "Diary")'; // Redirect to private diary
+                    } else {
+                        $('#errorMessage').show();
+                    }
+                },
+                error: function () {
+                    alert("An error occurred while validating the password.");
+                }
+            });
+        }
+
+        function PublicDiary() {
+            window.location.href = '@Url.Action("Public", "Diary")';
+        }
+        function IndexDiary() {
+            window.location.href = '@Url.Action("Index", "Diary")';
+        }
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('#successAlert').fadeOut('slow');
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>

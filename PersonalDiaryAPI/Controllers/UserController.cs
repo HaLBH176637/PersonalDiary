@@ -28,7 +28,6 @@ namespace PersonalDiaryAPI.Controllers
                 .Include(user => user.Reports)
                 .Include(user => user.Shares)
                 .Include(user => user.Posts)
-                .ThenInclude(post => post.Tags)
                 .Select(x => new UserDTO
                 {
                     Username = x.Username,
@@ -50,7 +49,6 @@ namespace PersonalDiaryAPI.Controllers
                 .Include(user => user.Reports)
                 .Include(user => user.Shares)
                 .Include(user => user.Posts)
-                .ThenInclude(post => post.Tags)
                 .Where(i => i.Id == id).Select(x => new UserDTO
                 {
                     Id = x.Id,
@@ -109,6 +107,5 @@ namespace PersonalDiaryAPI.Controllers
 
             return Ok("Cập nhật thành công người dùng với ID: " + userDTO.Id);
         }
-
     }
 }

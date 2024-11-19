@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {}
+    "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {
+    "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+        "projectUniqueName": "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
         "projectName": "PersonalDiaryClient",
-        "projectPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
-        "packagesPath": "C:\\Users\\hayha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hayha\\OneDrive\\Máy tính\\Project_PRN231\\PersonalDiary\\PersonalDiaryClient\\obj\\",
+        "projectPath": "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\PersonalDiaryClient.csproj",
+        "packagesPath": "C:\\Users\\leha1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leha1\\Downloads\\PersonalDiary\\PersonalDiary\\PersonalDiaryClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hayha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\leha1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,9 +45,29 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "DotnetGeminiSDK": {
+              "target": "Package",
+              "version": "[1.0.14, )"
+            },
+            "GeminiChat.DotNet": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
+            "Markdig": {
+              "target": "Package",
+              "version": "[0.38.0, )"
+            },
             "Microsoft.AspNet.WebApi.Client": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.30, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.30, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -72,6 +92,14 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "PagedList": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -93,7 +121,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

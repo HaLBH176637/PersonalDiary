@@ -10,12 +10,12 @@ namespace PersonalDiaryAPI.Models
             Likes = new HashSet<Like>();
             Reports = new HashSet<Report>();
             Shares = new HashSet<Share>();
-            Tags = new HashSet<Tag>();
         }
 
         public int Id { get; set; }
         public int UserId { get; set; }
         public string Content { get; set; } = null!;
+        public string Tag { get; set; } = null!;
         public DateTime? CreatedAt { get; set; }
         public string Privacy { get; set; } = null!;
 
@@ -23,7 +23,6 @@ namespace PersonalDiaryAPI.Models
         public virtual ICollection<Like> Likes { get; set; }
         public virtual ICollection<Report> Reports { get; set; }
         public virtual ICollection<Share> Shares { get; set; }
-
-        public virtual ICollection<Tag> Tags { get; set; }
     }
+
 }

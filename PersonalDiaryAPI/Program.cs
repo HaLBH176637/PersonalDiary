@@ -1,3 +1,5 @@
+using DotnetGeminiSDK.Client.Interfaces;
+using DotnetGeminiSDK.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -5,13 +7,21 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PersonalDiaryAPI.Models;
 using System.Text;
+using DotnetGeminiSDK;
 
 var builder = WebApplication.CreateBuilder(args);
 string conStr = builder.Configuration.GetConnectionString("ConStr");
 // Add services to the container.
+
+
 builder.Services.AddDbContext<PersonalDiaryContext>(opt => opt.UseSqlServer(conStr));
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddGeminiClient(config =>
+{
+    config.ApiKey = "AIzaSyA4mTa5P9V8QtEVOPecbktLdd6LJ5umvHI";
+    //config.ImageBaseUrl = "CURRENTLY_IMAGE_BASE_URL";
+    //config.TextBaseUrl = "CURRENTLY_IMAGE_BASE_URL";
+});
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

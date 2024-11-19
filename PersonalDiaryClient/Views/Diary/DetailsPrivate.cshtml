@@ -1,0 +1,44 @@
+﻿@model PersonalDiaryClient.Models.Post
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Model.Tag - Post Private Details</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container-fluid d-flex justify-content-between">
+        <form asp-action="Private" asp-controller="Diary">
+            <button class="btn-warning" value="Diary" style="background: yellow;">Diary</button>
+        </form>
+    </div>
+    <div class="container mt-5">
+        <div class="post-details">
+            <h1 class="text-center text-primary">@Model.Tag</h1>
+            <p class="text-muted text-center">Posted on: @Model.CreatedAt?.ToString("yyyy-MM-dd")</p>
+            <p class="text-muted text-center">
+                Author: @Model.User.Fullname
+            </p>
+            <div class="post-content mt-4">
+                @Model.Content
+            </div>
+            <div class="text-center mt-4">
+                <a href="@Url.Action("Private", "Diary")" class="btn btn-outline-secondary">Back to Private Diary</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function PrivateDiary() {
+            window.location.href = '@Url.Action("Private", "Diary")';
+        }
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

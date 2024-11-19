@@ -21,7 +21,6 @@ namespace PersonalDiaryAPI.Models
         public virtual DbSet<Report> Reports { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
         public virtual DbSet<Share> Shares { get; set; } = null!;
-        public virtual DbSet<Tag> Tags { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -55,13 +54,13 @@ namespace PersonalDiaryAPI.Models
                     .WithMany(p => p.Likes)
                     .HasForeignKey(d => d.PostId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Like__postId__440B1D61");
+                    .HasConstraintName("FK__Like__postId__46E78A0C");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Likes)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Like__userId__4316F928");
+                    .HasConstraintName("FK__Like__userId__47DBAE45");
             });
 
             modelBuilder.Entity<Post>(entity =>
@@ -81,30 +80,17 @@ namespace PersonalDiaryAPI.Models
                     .HasMaxLength(10)
                     .HasColumnName("privacy");
 
+                entity.Property(e => e.Tag)
+                    .HasMaxLength(50)
+                    .HasColumnName("tag");
+
                 entity.Property(e => e.UserId).HasColumnName("userId");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Posts)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Post__userId__3F466844");
-
-                entity.HasMany(d => d.Tags)
-                    .WithMany(p => p.Posts)
-                    .UsingEntity<Dictionary<string, object>>(
-                        "PostTag",
-                        l => l.HasOne<Tag>().WithMany().HasForeignKey("TagId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK__PostTag__tagId__534D60F1"),
-                        r => r.HasOne<Post>().WithMany().HasForeignKey("PostId").OnDelete(DeleteBehavior.ClientSetNull).HasConstraintName("FK__PostTag__postId__52593CB8"),
-                        j =>
-                        {
-                            j.HasKey("PostId", "TagId").HasName("PK__PostTag__B803B38F507566CD");
-
-                            j.ToTable("PostTag");
-
-                            j.IndexerProperty<int>("PostId").HasColumnName("postId");
-
-                            j.IndexerProperty<int>("TagId").HasColumnName("tagId");
-                        });
+                    .HasConstraintName("FK__Post__userId__48CFD27E");
             });
 
             modelBuilder.Entity<Report>(entity =>
@@ -130,13 +116,13 @@ namespace PersonalDiaryAPI.Models
                     .WithMany(p => p.Reports)
                     .HasForeignKey(d => d.PostId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Report__postId__4D94879B");
+                    .HasConstraintName("FK__Report__postId__49C3F6B7");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Reports)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Report__userId__4CA06362");
+                    .HasConstraintName("FK__Report__userId__4AB81AF0");
             });
 
             modelBuilder.Entity<Role>(entity =>
@@ -169,24 +155,13 @@ namespace PersonalDiaryAPI.Models
                     .WithMany(p => p.Shares)
                     .HasForeignKey(d => d.PostId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Share__postId__47DBAE45");
+                    .HasConstraintName("FK__Share__postId__4BAC3F29");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Shares)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Share__userId__48CFD27E");
-            });
-
-            modelBuilder.Entity<Tag>(entity =>
-            {
-                entity.ToTable("Tag");
-
-                entity.Property(e => e.Id).HasColumnName("id");
-
-                entity.Property(e => e.TagName)
-                    .HasMaxLength(50)
-                    .HasColumnName("tagName");
+                    .HasConstraintName("FK__Share__userId__4CA06362");
             });
 
             modelBuilder.Entity<User>(entity =>
@@ -224,6 +199,10 @@ namespace PersonalDiaryAPI.Models
                     .HasMaxLength(255)
                     .HasColumnName("password");
 
+                entity.Property(e => e.PrivatePassword)
+                    .HasMaxLength(255)
+                    .HasColumnName("privatePassword");
+
                 entity.Property(e => e.RoleId).HasColumnName("roleId");
 
                 entity.Property(e => e.Username)
@@ -233,7 +212,7 @@ namespace PersonalDiaryAPI.Models
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Users)
                     .HasForeignKey(d => d.RoleId)
-                    .HasConstraintName("FK__User__roleId__3B75D760");
+                    .HasConstraintName("FK__User__roleId__4D94879B");
             });
 
             OnModelCreatingPartial(modelBuilder);

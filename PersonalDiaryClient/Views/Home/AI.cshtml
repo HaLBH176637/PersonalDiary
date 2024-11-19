@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "AI Interaction";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .chat-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+    </style>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container-fluid d-flex justify-content-between">
+        <form asp-action="Index" asp-controller="Home">
+            <button class="btn-warning" value="Home" style="background: yellow;">Home</button>
+        </form>
+        <form asp-action="Logout" asp-controller="Home" class="mr-2">
+            <button class="btn-danger" value="Logout" style="background: red;">Logout</button>
+        </form>
+    </div>
+
+    <div class="chat-container">
+        <p>@Context.Request.Query["userInput"]</p>
+
+        <h3>AI's Response:</h3>
+        <p id="aiResponse">@ViewBag.AIResponse</p>
+
+        <!-- Take Template Button -->
+        <button type="button" class="btn btn-success" id="takeTemplateBtn">Take Template</button>
+
+        <form asp-action="AskAI" method="post" class="input-group" id="aiForm">
+            <textarea class="form-control" id="userInput" name="userInput" rows="2" placeholder="Type your question here..." required></textarea>
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('takeTemplateBtn').addEventListener('click', function () {
+            // Get the AI response text
+            var aiResponseText = document.getElementById('aiResponse').innerText;
+
+            // Redirect to the Index page with the AI response inserted into the textarea
+            window.location.href = '/Diary/Index?aiResponse=' + encodeURIComponent(aiResponseText);
+        });
+    </script>
+</body>
+</html>

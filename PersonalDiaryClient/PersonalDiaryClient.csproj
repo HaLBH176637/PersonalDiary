@@ -15,6 +15,15 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.30" />
 	</ItemGroup>
 	<ItemGroup>
+		<PackageReference Include="DotnetGeminiSDK" Version="1.0.14" />
+		<PackageReference Include="GeminiChat.DotNet" Version="1.0.5" />
+		<PackageReference Include="Markdig" Version="0.38.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.30" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.30" />
+		<PackageReference Include="PagedList" Version="1.17.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+	<ItemGroup>
 	  <Content Update="appsettings.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>

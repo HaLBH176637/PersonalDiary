@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using PersonalDiaryAPI.Models;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace PersonalDiaryAPI.Controllers
@@ -46,7 +47,7 @@ namespace PersonalDiaryAPI.Controllers
             if (user != null)
             {
                 var token = GenerateToken(user);
-                response = Ok(new { token = token });
+                response = Ok(new { token = token , userId = user.Id });
             }
             return response;
         }
